@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read (One)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1 class="display-2 m-4">User {{userinfo[0]['id']}}</h1>
+    <a href="/users" class="btn btn-danger mx-4">Home</a>
+    <div class="m-4" style="height: 250px; width: 50%; border: 4px solid black; padding: 20px;">
+        <p class="h4 mx-2 mt-3">Full Name: {{userinfo[0]['first_name']}} {{userinfo[0]['last_name']}}</p>
+        <p class="h4 mx-2 mt-3">Email: {{userinfo[0]['email']}}</p>
+        <p class="h4 mx-2 mt-3">Created On: {{userinfo[0]['created_at']}}</p>
+        <p class="h4 mx-2 mt-3">Last Update On: {{userinfo[0]['updated_at']}}</p>
+    </div>
+
+    <p><a href="/users/{{userinfo[0]['id']}}/edit" class="btn btn-info mx-4" >Edit</a> / <a href="/users/{{userinfo[0]['id']}}/delete" class="btn btn-success mx-4" >Delete</a></p>
+</body>
+</html>
